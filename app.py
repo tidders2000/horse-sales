@@ -174,7 +174,13 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)     
 
+@app.route('/allhorses', methods=['POST','GET']) 
+def allhorses():
     
+        images=Image.query.all()
+        return render_template("allhorses.html",images=images)
+
+
 if __name__=='__main__':
     
     app.run(host=os.environ.get('IP'),
