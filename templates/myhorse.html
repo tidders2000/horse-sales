@@ -6,8 +6,10 @@
 
     <h1 class="mh txtcen">{{ myhorse.name }}</h1>
     
-    <h3 class="mh">Age:<i class='mh-normal'>{{ myhorse.age }}</i></h3>
-    <h3 class="mh">Breeding:<i class='mh-normal'>{{myhorse.Breeding }}</i></h3>
+    <h3 class="mh">Age:</h3>
+    <p><i class="mh-normal"></i>{{ myhorse.age }}</span></p>
+    <h3 class="mh">Breeding:</h3>
+    <p><i class='mh-normal'>{{myhorse.Breeding }}</i></p>
     <h3 class="mh">About:</h3>
     <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
     sed diam nonummy nibh euismod tincidunt ut laoreet dolore
@@ -20,7 +22,7 @@
     <h3 class="mh">Pictures:</h3>
     {% for image in images%}
     {% if image.horse_id == myhorse.id %}
-    <img src="../static/uploads/{{image.photo}} " class="image-fp" alt="{{ myhorse.name }}"/>
+    <img src="../static/uploads/{{image.photo}}" class="image-fp" alt="{{ myhorse.name }}"/>
     {% endif %}
     {% endfor %}
    
