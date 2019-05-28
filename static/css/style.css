@@ -44,7 +44,7 @@
 .three-section{
 padding-top: 30px;
  background-color: #F8F9FA;
- height:300px;
+ min-height:300px;
 }
 
 .three-content{
